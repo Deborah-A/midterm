@@ -1,0 +1,399 @@
+body {
+  margin: 0;
+  padding: 0vmin 6vmin 0vmin 6vmin;
+  background-image: url('assets/bkgd.png');
+  background-attachment: fixed;
+  font-family: politica, sans-serif;
+  font-size: 2rem;
+  color: #222;
+}
+
+body h1 {
+  font-family: chelsea-market-pro, sans-serif;
+  font-size: 3rem;
+  margin-left: 3vmin
+}
+
+body p {
+  margin-left: 3vmin
+}
+
+.mainGrid {
+  padding: 6vmin 12vmin 0vmin 12vmin;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 10vmin;
+  grid-row-gap: 6vmin;
+}
+
+.mainGrid * {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.item-4x4 {
+  grid-column-end: span 4;
+  grid-row-end: span 4;
+}
+
+.item-4x4 img {
+  width: 100%;
+}
+
+.item-2x2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.item-2x2 img {
+  width: 100%;
+}
+
+/* googled how to do hover and this was the only way i found that would change the 'source' of the image without JS https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html & http://jsfiddle.net/DRRnu/ */
+#img-1:hover {
+  content: url('assets/EOY.png');
+}
+
+#img-2:hover {
+  content: url('assets/app.png');
+}
+
+#img-3:hover {
+  content: url('assets/artissue.png');
+}
+
+#img-4:hover {
+  content: url('assets/gradgo.png');
+}
+
+#img-5:hover {
+  content: url('assets/mailhome.png');
+}
+
+#img-6:hover {
+  content: url('assets/golf.png');
+}
+
+#img-7:hover {
+  content: url('assets/library.png');
+}
+
+#img-8:hover {
+  content: url('assets/puppies.png');
+}
+
+#img-9:hover {
+  content: url('assets/poster.png');
+}
+
+#img-10:hover {
+  content: url('assets/profile.png');
+}
+
+#img-11:hover {
+  content: url('assets/kit.png');
+}
+
+#img-12:hover {
+  content: url('assets/yearbook.png');
+}
+
+/* reversed of above */
+#r-img-1:hover {
+  content: url('assets/EOY.gif');
+}
+
+#r-img-2:hover {
+  content: url('assets/app.gif');
+}
+
+#r-img-3:hover {
+  content: url('assets/artissue.gif');
+}
+
+#r-img-4:hover {
+  content: url('assets/gradgo.gif');
+}
+
+#r-img-5:hover {
+  content: url('assets/mailhome.gif');
+}
+
+#r-img-6:hover {
+  content: url('assets/golf.gif');
+}
+
+#r-img-7:hover {
+  content: url('assets/library.gif');
+}
+
+#r-img-8:hover {
+  content: url('assets/puppies.gif');
+}
+
+#r-img-9:hover {
+  content: url('assets/poster.gif');
+}
+
+#r-img-10:hover {
+  content: url('assets/profile.gif');
+}
+
+#r-img-11:hover {
+  content: url('assets/kit.gif');
+}
+
+#r-img-12:hover {
+  content: url('assets/yearbook.png');
+}
+
+.line {
+  /* grid-row-end: span 1; */
+  /* z-index: -1; */
+  /* grid-row-end: span 8; */
+  border-left: 6px solid #222;
+  height: 100%;
+}
+
+/* diff rotations for poloroids*/
+.rotate-1 {
+  transform: rotate(-10deg);
+}
+
+.rotate-2 {
+  transform: rotate(10deg);
+}
+
+.rotate-3 {
+  transform: rotate(5deg);
+}
+
+.rotate-4 {
+  transform: rotate(-5deg);
+}
+
+.rotate-5 {
+  transform: rotate(15deg);
+}
+
+.rotate {
+  transform: rotate(-15deg);
+}
+
+.wide-img {
+  width: 100%;
+}
+
+
+.header h1 {
+  font-family: chelsea-market-open, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5vmax;
+  margin-left: 3vmin;
+  /*float was acting weird so i'm cheating it to line up with the nav*/
+  /* margin-top: -11vmax; */
+}
+
+.header img {
+  /* height: 1vmin; */
+  width: 100%;
+  padding: 0;
+}
+
+/* nav related tags */
+nav ul {
+  /*removes the bullet points from the list*/
+  z-index: 1;
+  /* brings it infront of the glitch element so the background doesnt affect it*/
+  position: relative;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -2vmin;
+  list-style-type: none;
+  margin-right: 2vmin;
+  display: float;
+  float: right;
+}
+
+nav li {
+  font-family: politica, sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  display: inline;
+  padding: 10px;
+  line-height: 8vmax;
+}
+
+nav a:link {
+  text-decoration: underline;
+}
+
+nav a:visited {
+  text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav a:active {
+  text-decoration: underline;
+}
+
+.footer {}
+
+/* glitch header that i did by following a tutorial https://css-tricks.com/glitch-effect-text-images-svg/*/
+.glitch {
+  position: relative;
+  margin-bottom: -3vmin;
+  /* helps keeps the three copies basically on top of each other */
+}
+
+.glitch::before {
+  content: attr(data-text);
+  /* from what I understand content loads content */
+  position: absolute;
+  /* helps keeps the three copies basically on top of each other */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  background-image: url('assets/bkgd.png');
+  background-attachment: fixed;
+  /* background: #eee;  */
+  /*masks the original*/
+  /* animation: glitch-anim 2s infinite linear alternate-reverse; */
+  animation-name: glitch-animation-1;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+.glitch::after {
+  content: attr(data-text);
+  /* from what I understand content loads content specified from the attribute */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  left: -3px;
+  text-shadow: -1px 0 blue;
+  background-image: url('assets/bkgd.png');
+  background-attachment: fixed;
+  /*masks the original*/
+  /* animation: glitch-anim 2s infinite linear alternate; */
+  animation-name: glitch-animation-2;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes glitch-animation-1 {
+  0% {
+    clip-path: inset(40% 0 65% 0);
+  }
+
+  10% {
+    clip-path: inset(36% 0 42% 0);
+  }
+
+  20% {
+    clip-path: inset(34% 0 1% 0);
+  }
+
+  30% {
+    clip-path: inset(87% 0 92% 0);
+  }
+
+  40% {
+    clip-path: inset(43% 0 1% 0);
+  }
+
+  50% {
+    clip-path: inset(75% 0 61% 0);
+  }
+
+  60% {
+    clip-path: inset(25% 0 58% 0);
+  }
+
+  70% {
+    clip-path: inset(12% 0 31% 0);
+  }
+
+  80% {
+    clip-path: inset(54% 0 7% 0);
+  }
+
+  90% {
+    clip-path: inset(43% 0 61% 0);
+  }
+
+  100% {
+    clip-path: inset(58% 0 43% 0);
+  }
+}
+
+@keyframes glitch-animation-2 {
+  0% {
+    clip-path: inset(58% 0 12% 0);
+  }
+
+  10% {
+    clip-path: inset(78% 0 65% 0);
+  }
+
+  20% {
+    clip-path: inset(12% 0 44% 0);
+  }
+
+  30% {
+    clip-path: inset(27% 0 34% 0);
+  }
+
+  40% {
+    clip-path: inset(23% 0 91% 0);
+  }
+
+  50% {
+    clip-path: inset(93% 0 87% 0);
+  }
+
+  60% {
+    clip-path: inset(47% 0 70% 0);
+  }
+
+  70% {
+    clip-path: inset(32% 0 49% 0);
+  }
+
+  80% {
+    clip-path: inset(9% 0 43% 0);
+  }
+
+  90% {
+    clip-path: inset(64% 0 69% 0);
+  }
+
+  100% {
+    clip-path: inset(13% 0 21% 0);
+  }
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
